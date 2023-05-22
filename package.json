@@ -7,11 +7,13 @@
     "test": "jest",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://mar12358.github.io/JavaScriptCapstone/",
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
@@ -225,6 +227,7 @@
     "get-stream": "^5.2.0",
     "get-symbol-description": "^1.0.0",
     "get-uri": "^3.0.2",
+    "gh-pages": "^5.0.0",
     "glob": "^10.2.6",
     "glob-parent": "^5.1.2",
     "global-dirs": "^3.0.1",
