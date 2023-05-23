@@ -70,4 +70,34 @@ footer {
 
 .card-element {
   /* height: 15vh; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 15px;
+}
+
+.meal-img {
+  height: 20vh;
+  width: auto;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.like-icon { 
+  height: 20px;
+}
+
+.like-div {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.meal-name {
+/*   width: 15vw; */
 }
