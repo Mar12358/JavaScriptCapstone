@@ -10,7 +10,7 @@ const getMeals = async () => {
 
 const populateHTML = (meals) => {
   const container = document.querySelector('.food-list');
-  console.log(meals);
+  /* console.log(meals); */
   for (let i = 0; i < 6; i += 1) {
     const id = meals[i].idMeal;
     const mealName = meals[i].strMeal;
@@ -19,7 +19,7 @@ const populateHTML = (meals) => {
 
     div.id = id;
     div.className = 'card-element';
-    div.innerHTML = `<img class="meal-img" src=${img} alt="">
+    div.innerHTML = `<a class="img-container"><img class="meal-img" src=${img} alt=""></a>
                     <div class="info">
                       <span class="meal-name">${mealName}</span>
                       <div class="like-div">
@@ -27,7 +27,8 @@ const populateHTML = (meals) => {
                         <span>5 likes</span>
                       </div>
                     </div>
-                    <button class="comment-button">Comments</button>`;
+                    <div class="btn-container"><button class="comment-button">Comments</button></div>
+                    <div class="reservations-container"><button class="reservations-button">Reservations</button></div>`;
 
     container.appendChild(div);
   }

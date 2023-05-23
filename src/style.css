@@ -73,12 +73,20 @@ footer {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  gap: 15px;
+  gap: 0.5vh;
+  margin-bottom: 3vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 .meal-img {
   height: 20vh;
-  width: auto;
+}
+.img-container,
+.btn-container,
+.reservations-container {
+  display: flex;
+  justify-content: center;
 }
 
 .info {
@@ -98,6 +106,10 @@ flex-direction: column;
 align-items: center;
 }
 
-.meal-name {
-/*   width: 15vw; */
+.comment-button,
+.reservations-button {
+  width: 55%;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  text-align: center;
 }
