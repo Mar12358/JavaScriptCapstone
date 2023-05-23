@@ -52,3 +52,36 @@ footer {
 #header-logo {
   height: 3rem;
 }
+
+
+/* poupup style starteded */
+
+.popup-window {
+  width: 80%;
+  margin: 2px auto;
+  background-color: aquamarine;
+}
+
+#btnClose {
+  float: right;
+  font-size: 32px;
+}
+
+.meal-image img {
+  margin-left: 25%;
+  width: 500px;
+  height: 350px;
+}
+
+.food-name {
+  text-align: center;
+}
+
+.names-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 30px; */
+  row-gap: 30px;
+  column-gap: 20px;
+  padding: 8px 30px;
+}

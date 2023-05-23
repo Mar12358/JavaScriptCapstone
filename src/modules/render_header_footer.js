@@ -24,13 +24,14 @@ const renderHeaderFooter = () => {
   footer.innerHTML = `<footer>
                         <p>Created by Microverse students by MIT license</p>
                       </footer>`;
+
   body.insertBefore(nav, h1);
   body.appendChild(section);
   body.appendChild(footer);
   const btn = document.createElement('button');
   btn.innerHTML = 'Comments';
   btn.className = 'comment-button';
-  btn.id = '42';
+  btn.id = '52772';
   body.appendChild(btn);
 };
 
