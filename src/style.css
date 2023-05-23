@@ -85,3 +85,7 @@ footer {
   column-gap: 20px;
   padding: 8px 30px;
 }
+
+.invisible {
+  display: none;
+}

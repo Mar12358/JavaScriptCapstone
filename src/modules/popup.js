@@ -1,10 +1,11 @@
-import renderHeaderFooter from './render_header_footer.js';
-
+const toggle = () => {
+  const elements = document.querySelectorAll('body > *');
+  elements.forEach((element) => {
+    element.classList.toggle('invisible');
+  });
+};
 const commentsPopup = async (id) => {
-  const popupDiv = document.createElement('div');
-  popupDiv.className = 'popup-window';
-
-  const containerPopup = document.querySelector('body');
+  const popupDiv = document.querySelector('.popup-window');
   await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`).then((res) => res.json()).then((d) => {
     popupDiv.innerHTML = `
   <button id="btnClose">x</button>  
@@ -19,20 +20,20 @@ const commentsPopup = async (id) => {
   </div>
   `;
   });
-  containerPopup.innerHTML = '';
-  containerPopup.append(popupDiv);
 
   const btnClose = document.querySelector('#btnClose');
   btnClose.addEventListener('click', () => {
-    popupDiv.setAttribute('style', 'display:none;');
-    renderHeaderFooter();
+    toggle();
   });
 };
 
 const commentsButtonListener = () => {
   const btn = document.querySelectorAll('.comment-button');
   for (let i = 0; i < btn.length; i += 1) {
-    btn[i].addEventListener('click', () => { commentsPopup(btn[i].id); });
+    btn[i].addEventListener('click', () => {
+      toggle();
+      commentsPopup(btn[i].id);
+    });
   }
 };
 

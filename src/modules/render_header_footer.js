@@ -1,6 +1,8 @@
 import headerLogo from '../header_logo.png';
 
 const renderHeaderFooter = () => {
+  const popUp = document.createElement('div');
+  popUp.className = 'popup-window invisible';
   const body = document.querySelector('body');
   const nav = document.createElement('nav');
   const section = document.createElement('section');
@@ -26,6 +28,7 @@ const renderHeaderFooter = () => {
   body.insertBefore(nav, h1);
   body.appendChild(section);
   body.appendChild(footer);
+  body.appendChild(popUp);
 };
 
 export default renderHeaderFooter;
