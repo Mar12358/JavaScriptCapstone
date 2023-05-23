@@ -6,6 +6,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
+    renderHeaderFooter: './src/render_header_footer.js',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -30,7 +31,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        use: 'file-loader',
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
