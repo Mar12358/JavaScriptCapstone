@@ -56,9 +56,10 @@ footer {
 .food-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2);
+  grid-template-rows: repeat(2, 1fr);
   gap: 2vw;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -72,6 +73,7 @@ footer {
   /* height: 15vh; */
   display: flex;
   flex-direction: column;
+
   /* align-items: center; */
   gap: 0.5vh;
   margin-bottom: 3vh;
@@ -82,6 +84,7 @@ footer {
 .meal-img {
   height: 20vh;
 }
+
 .img-container,
 .btn-container,
 .reservations-container {
@@ -93,17 +96,16 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
-.like-icon { 
+.like-icon {
   height: 20px;
 }
 
 .like-div {
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .comment-button,
