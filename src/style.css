@@ -56,15 +56,20 @@ footer {
 
 /* poupup style starteded */
 
-.popup-window {
-  width: 80%;
+.popup-window {  
+  width: 65%;
+  padding: 10px;
   margin: 2px auto;
-  background-color: aquamarine;
+  border: 1px solid blue;
 }
 
 #btnClose {
   float: right;
-  font-size: 32px;
+  margin-right: 10%;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: white;
+  border: none;
 }
 
 .meal-image img {
@@ -75,12 +80,13 @@ footer {
 
 .food-name {
   text-align: center;
+  margin: 10px;
 }
 
 .names-content {
+  margin-left: 27%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* gap: 30px; */
   row-gap: 30px;
   column-gap: 20px;
   padding: 8px 30px;
