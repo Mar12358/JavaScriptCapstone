@@ -1,4 +1,4 @@
-import headerLogo from './header_logo.png';
+import headerLogo from '../header_logo.png';
 
 const renderHeaderFooter = () => {
   const body = document.querySelector('body');
@@ -27,6 +27,11 @@ const renderHeaderFooter = () => {
   body.insertBefore(nav, h1);
   body.appendChild(section);
   body.appendChild(footer);
+  const btn = document.createElement('button');
+  btn.innerHTML = 'Comments';
+  btn.className = 'comment-button';
+  btn.id = '42';
+  body.appendChild(btn);
 };
 
 export default renderHeaderFooter;
