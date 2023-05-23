@@ -41,7 +41,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 10%;
   bottom: 0;
@@ -52,7 +52,6 @@ footer {
 #header-logo {
   height: 3rem;
 }
-
 
 /* poupup style starteded */
 
@@ -94,4 +93,65 @@ footer {
 
 .invisible {
   display: none;
+.food-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  align-items: center;
+  align-self: center;
+}
+
+.card-element {
+  /* height: 15vh; */
+  display: flex;
+  flex-direction: column;
+
+  /* align-items: center; */
+  gap: 0.5vh;
+  margin-bottom: 3vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.meal-img {
+  height: 20vh;
+}
+
+.img-container,
+.btn-container,
+.reservations-container {
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-icon {
+  height: 20px;
+}
+
+.like-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-button,
+.reservations-button {
+  width: 55%;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  text-align: center;
 }

@@ -25,6 +25,7 @@ const commentsPopup = async (id) => {
   btnClose.addEventListener('click', () => {
     toggle();
   });
+
 };
 
 const commentsButtonListener = () => {

@@ -20,15 +20,10 @@ const renderHeaderFooter = () => {
                        </div>`;
 
   footer.innerHTML = '<p>Created by Microverse students by MIT license</p>';
-  const btn = document.createElement('button');
-  btn.innerHTML = 'Comments';
-  btn.className = 'comment-button';
-  btn.id = '52772';
-  section.appendChild(btn);
+  body.appendChild(popUp);
   body.insertBefore(nav, h1);
   body.appendChild(section);
   body.appendChild(footer);
-  body.appendChild(popUp);
 };
 
 export default renderHeaderFooter;
