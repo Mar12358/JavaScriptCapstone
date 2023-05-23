@@ -30,7 +30,7 @@ const renderHeaderFooter = () => {
   const btn = document.createElement('button');
   btn.innerHTML = 'Comments';
   btn.className = 'comment-button';
-  btn.id = '42';
+  btn.id = '52772';
   body.appendChild(btn);
 };
 

@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     index: './src/index.js',
     renderHeaderFooter: './src/modules/render_header_footer.js',
+    popup: './src/modules/popup.js',
   },
   devtool: 'inline-source-map',
   devServer: {
