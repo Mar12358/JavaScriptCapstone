@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 const commentsPopup = (id) => {
   // your codew with id
 };
