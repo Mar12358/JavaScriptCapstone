@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./Font.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  background-color: aqua;
+  font-family: 'MyFont', sans-serif;
+}
