@@ -6,6 +6,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
+    renderHeaderFooter: './src/render_header_footer.js',
   },
   devtool: 'inline-source-map',
   devServer: {
