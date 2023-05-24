@@ -10,9 +10,8 @@ module.exports = {
     popup: './src/modules/popup.js',
     home: './src/modules/home_page.js',
     display: './src/modules/displayComments.js',
-    counterComment:'./src/modules/counterComment.js',
+    counterComment: './src/modules/counterComment.js',
     likes: './src/modules/likes.js',
-    display: './src/modules/displayComments.js',
   },
   devtool: 'inline-source-map',
   devServer: {

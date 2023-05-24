@@ -1,4 +1,4 @@
-import counterComments from './counterComment';
+import counterComments from './counterComment.js';
 
 const displayComment = async (id) => {
   await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/aZwedqY3IXDWCJKZoRkM/comments?item_id=${id}`)
