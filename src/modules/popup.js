@@ -1,5 +1,6 @@
-import displayComment from "./displayComments";
-import addComment from "./addComment";
+import displayComment from './displayComments.js';
+import addComment from './addComment.js';
+
 const toggle = () => {
   const elements = document.querySelectorAll('body > *');
   elements.forEach((element) => {
@@ -45,7 +46,7 @@ const commentsPopup = async (id) => {
   submit.addEventListener('click', (e) => {
     e.preventDefault();
     addComment(id);
-  })
+  });
 };
 
 const commentsButtonListener = () => {
