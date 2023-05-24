@@ -1,34 +1,13 @@
 import commentsButtonListener from './popup.js';
 import likeImg from '../like_img.png';
+import getLikes from './likes.js';
 
 const MealsAPIurl = 'https://www.themealdb.com/api/json/v1/1/search.php?f=f';
-const InvAPIurl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/aZwedqY3IXDWCJKZoRkM/likes';
 
 const getMeals = async () => {
   const data = await fetch(MealsAPIurl);
   const { meals } = await data.json();
   return meals;
-};
-
-const getLikes = async () => {
-  try {
-    const response = await fetch(InvAPIurl, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const contentType = response.headers.get('content-type');
-    if (contentType && contentType.includes('application/json')) {
-      return response.json();
-    }
-    return []; // Return an empty array if the response body is empty or not in JSON format
-  } catch (error) {
-    return []; // Return an empty array in case of an error
-  }
 };
 
 const populateHTML = (meals, allLikes) => {
