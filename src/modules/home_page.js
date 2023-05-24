@@ -14,6 +14,7 @@ const addLikesListenerButtons = () => {
   const likeButtons = document.querySelectorAll('.like-btn');
   likeButtons.forEach((likeBtn) => {
     likeBtn.addEventListener('click', (event) => {
+      event.preventDefault();
       addLike(likeBtn.id);
     });
   });
