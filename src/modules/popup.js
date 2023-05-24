@@ -8,8 +8,11 @@ const commentsPopup = async (id) => {
   const popupDiv = document.querySelector('.popup-window');
   await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`).then((res) => res.json()).then((d) => {
     popupDiv.innerHTML = `
+    <div class="test-div">
+  
   <button id="btnClose">X</button>  
-  <div class="meal-image"><img src="${d.meals[0].strMealThumb}" /></div>
+  <img src="${d.meals[0].strMealThumb}"/>
+  </div>
   <h3 class="food-name">${d.meals[0].strMeal}</h3>
 
   <div class="names-content" id="names-content">

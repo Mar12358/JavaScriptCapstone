@@ -57,24 +57,32 @@ footer {
 
 .popup-window {
   width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px;
   margin: 2px auto;
-  border: 1px solid blue;
+  border: 2px solid rgb(12, 12, 14);
+}
+
+.test-div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 2%;
 }
 
 #btnClose {
-  float: right;
-  margin-right: 10%;
   font-size: 27px;
   font-weight: bold;
-  background-color: white;
+  width: 6%;
+  height: 15%;
+  background-color: inherit;
   border: none;
 }
 
-.meal-image img {
-  margin-left: 25%;
-  width: 500px;
-  height: 350px;
+.test-div img {
+  width: 40%;
 }
 
 .food-name {
@@ -83,7 +91,7 @@ footer {
 }
 
 .names-content {
-  margin-left: 27%;
+  justify-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 30px;
