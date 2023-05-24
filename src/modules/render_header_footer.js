@@ -1,6 +1,8 @@
 import headerLogo from '../header_logo.png';
 
 const renderHeaderFooter = () => {
+  const popUp = document.createElement('div');
+  popUp.className = 'popup-window invisible';
   const body = document.querySelector('body');
   const nav = document.createElement('nav');
   const section = document.createElement('section');
@@ -18,6 +20,7 @@ const renderHeaderFooter = () => {
                        </div>`;
 
   footer.innerHTML = '<p>Created by Microverse students by MIT license</p>';
+  body.appendChild(popUp);
   body.insertBefore(nav, h1);
   body.appendChild(section);
   body.appendChild(footer);

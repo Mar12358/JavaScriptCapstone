@@ -1,3 +1,4 @@
+import commentsButtonListener from './popup.js';
 import likeImg from '../like_img.png';
 
 const APIurl = 'https://www.themealdb.com/api/json/v1/1/search.php?f=f';
@@ -27,7 +28,7 @@ const populateHTML = (meals) => {
                         <span>5 likes</span>
                       </div>
                     </div>
-                    <div class="btn-container"><button class="comment-button">Comments</button></div>
+                    <div class="btn-container"><button id="${id}" class="comment-button">Comments</button></div>
                     <div class="reservations-container"><button class="reservations-button">Reservations</button></div>`;
 
     container.appendChild(div);
@@ -37,6 +38,7 @@ const populateHTML = (meals) => {
 const onLoad = async () => {
   const meals = await getMeals();
   populateHTML(meals);
+  commentsButtonListener();
 };
 
 export default onLoad;

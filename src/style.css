@@ -53,6 +53,52 @@ footer {
   height: 3rem;
 }
 
+/* poupup style starteded */
+
+.popup-window {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin: 2px auto;
+  border: 2px solid rgb(12, 12, 14);
+}
+
+.test-div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 2%;
+}
+
+#btnClose {
+  font-size: 27px;
+  font-weight: bold;
+  width: 6%;
+  height: 15%;
+  background-color: inherit;
+  border: none;
+}
+
+.test-div img {
+  width: 40%;
+}
+
+.food-name {
+  text-align: center;
+  margin: 10px;
+}
+
+.names-content {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+  column-gap: 20px;
+  padding: 8px 30px;
+}
+
 .food-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -114,4 +160,8 @@ footer {
   padding-top: 0.5vh;
   padding-bottom: 0.5vh;
   text-align: center;
+}
+
+.invisible {
+  display: none;
 }
