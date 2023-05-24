@@ -10,6 +10,17 @@ const getMeals = async () => {
   return meals;
 };
 
+const addLike = () => {
+
+};
+
+const addLikesListenerButton = () => {
+  const likeButtons = document.querySelectorAll('.like-btn');
+  likeButtons.forEach((likeBtn) => {
+    likeBtn.addEventListener('click', addLike);
+  });
+};
+
 const populateHTML = (meals, allLikes) => {
   const container = document.querySelector('.food-list');
   /* console.log(meals); */
@@ -25,7 +36,7 @@ const populateHTML = (meals, allLikes) => {
                     <div class="info">
                       <span class="meal-name">${mealName}</span>
                       <div class="like-div">
-                        <a href=""><img class="like-icon" src=${likeImg} alt=""></a>
+                        <a class="like-btn" href=""><img class="like-icon" src=${likeImg} alt=""></a>
                         <span>${mealLikes ? mealLikes.likes : 0} likes</span>
                       </div>
                     </div>
@@ -33,6 +44,7 @@ const populateHTML = (meals, allLikes) => {
                     <div class="reservations-container"><button class="reservations-button">Reservations</button></div>`;
 
     container.appendChild(div);
+    addLikesListenerButton();
   }
 };
 
