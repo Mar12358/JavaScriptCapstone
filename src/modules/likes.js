@@ -21,11 +21,16 @@ export const getLikes = async () => {
   }
 };
 
-export const addLike = (id) => {
+export const updateLikesOnDOM = (likeBtn) => {
+  const likeElement = likeBtn.nextElementSibling;
+  const likes = Number(likeElement.innerHTML.split(' ')[0]);
+  likeElement.innerHTML = `${likes + 1} likes`;
+};
+export const addLike = (likeBtn) => {
   fetch(InvAPIurl, {
     method: 'POST',
     body: JSON.stringify({
-      item_id: id,
+      item_id: likeBtn.id,
     }),
     headers: {
       'Content-Type': 'application/json',
@@ -38,8 +43,13 @@ export const addLike = (id) => {
     });
 };
 
-export const updateLikesOnDOM = (likeBtn) => {
-  const likeElement = likeBtn.nextElementSibling;
-  const likes = Number(likeElement.innerHTML.split(' ')[0]);
-  likeElement.innerHTML = `${likes + 1} likes`;
+export const addLikesListenerButtons = () => {
+  const likeButtons = document.querySelectorAll('.like-btn');
+  likeButtons.forEach((likeBtn) => {
+    likeBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      addLike(likeBtn);
+      updateLikesOnDOM(likeBtn);
+    });
+  });
 };
