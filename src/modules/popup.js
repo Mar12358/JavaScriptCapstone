@@ -1,7 +1,6 @@
 const toggle = () => {
   const elements = document.querySelectorAll('body > *');
   elements.forEach((element) => {
-    console.log(element);
     element.classList.toggle('invisible');
   });
 };
