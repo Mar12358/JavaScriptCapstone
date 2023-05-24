@@ -10,6 +10,7 @@ module.exports = {
     popup: './src/modules/popup.js',
     home: './src/modules/home_page.js',
     likes: './src/modules/likes.js',
+    display: './src/modules/displayComments.js',
   },
   devtool: 'inline-source-map',
   devServer: {
