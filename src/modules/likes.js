@@ -38,6 +38,8 @@ export const addLike = (id) => {
     });
 };
 
-export const updateLikesOnDOM = (likBtn) => {
-  console.log(likBtn);
+export const updateLikesOnDOM = (likeBtn) => {
+  const likeElement = likeBtn.nextElementSibling;
+  const likes = Number(likeElement.innerHTML.split(' ')[0]);
+  likeElement.innerHTML = `${likes + 1} likes`;
 };
