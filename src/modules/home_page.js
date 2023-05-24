@@ -1,6 +1,6 @@
 import commentsButtonListener from './popup.js';
 import likeImg from '../like_img.png';
-import { getLikes, addLike } from './likes.js';
+import { getLikes, addLike, updateLikesOnDOM } from './likes.js';
 
 const MealsAPIurl = 'https://www.themealdb.com/api/json/v1/1/search.php?f=f';
 
@@ -16,6 +16,7 @@ const addLikesListenerButtons = () => {
     likeBtn.addEventListener('click', (event) => {
       event.preventDefault();
       addLike(likeBtn.id);
+      updateLikesOnDOM(likeBtn);
     });
   });
 };
@@ -43,8 +44,8 @@ const populateHTML = (meals, allLikes) => {
                     <div class="reservations-container"><button class="reservations-button">Reservations</button></div>`;
 
     container.appendChild(div);
-    addLikesListenerButtons();
   }
+  addLikesListenerButtons();
 };
 
 const onLoad = async () => {

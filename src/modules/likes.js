@@ -37,3 +37,7 @@ export const addLike = (id) => {
       }
     });
 };
+
+export const updateLikesOnDOM = (likBtn) => {
+  console.log(likBtn);
+};
