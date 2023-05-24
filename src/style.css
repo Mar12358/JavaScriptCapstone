@@ -165,3 +165,43 @@ footer {
 .invisible {
   display: none;
 }
+
+.show-comment-title,
+.add-comment-title {
+  text-align: center;
+  margin: 10px;
+}
+
+.comment-list {
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+  color: #555;
+}
+
+.comment-list .span {
+  margin: 6px;
+}
+
+#form-comment {
+  width: 50%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+}
+
+.userName {
+  margin-top: 2%;
+  width: 40%;
+}
+
+.userComent {
+  width: 50%;
+}
+
+.submit {
+  margin-bottom: 5%;
+  width: 40%;
+}
