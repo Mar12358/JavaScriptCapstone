@@ -1,6 +1,6 @@
 import commentsButtonListener from './popup.js';
 import likeImg from '../like_img.png';
-import getLikes from './likes.js';
+import { getLikes, addLike } from './likes.js';
 
 const MealsAPIurl = 'https://www.themealdb.com/api/json/v1/1/search.php?f=f';
 
@@ -10,14 +10,12 @@ const getMeals = async () => {
   return meals;
 };
 
-const addLike = () => {
-
-};
-
-const addLikesListenerButton = () => {
+const addLikesListenerButtons = () => {
   const likeButtons = document.querySelectorAll('.like-btn');
   likeButtons.forEach((likeBtn) => {
-    likeBtn.addEventListener('click', addLike);
+    likeBtn.addEventListener('click', (event) => {
+      addLike(likeBtn.id);
+    });
   });
 };
 
@@ -36,7 +34,7 @@ const populateHTML = (meals, allLikes) => {
                     <div class="info">
                       <span class="meal-name">${mealName}</span>
                       <div class="like-div">
-                        <a class="like-btn" href=""><img class="like-icon" src=${likeImg} alt=""></a>
+                        <a id=${id} class="like-btn" href=""><img class="like-icon" src=${likeImg} alt=""></a>
                         <span>${mealLikes ? mealLikes.likes : 0} likes</span>
                       </div>
                     </div>
@@ -44,7 +42,7 @@ const populateHTML = (meals, allLikes) => {
                     <div class="reservations-container"><button class="reservations-button">Reservations</button></div>`;
 
     container.appendChild(div);
-    addLikesListenerButton();
+    addLikesListenerButtons();
   }
 };
 

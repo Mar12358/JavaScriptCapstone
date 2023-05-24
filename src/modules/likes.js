@@ -1,6 +1,6 @@
 const InvAPIurl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/aZwedqY3IXDWCJKZoRkM/likes';
 
-const getLikes = async () => {
+export const getLikes = async () => {
   try {
     const response = await fetch(InvAPIurl, {
       method: 'GET',
@@ -21,4 +21,19 @@ const getLikes = async () => {
   }
 };
 
-export default getLikes;
+export const addLike = (id) => {
+  fetch(InvAPIurl, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: id,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+    });
+};
