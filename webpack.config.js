@@ -9,6 +9,8 @@ module.exports = {
     renderHeaderFooter: './src/modules/render_header_footer.js',
     popup: './src/modules/popup.js',
     home: './src/modules/home_page.js',
+    display: './src/modules/displayComments.js',
+    counterComment:'./src/modules/counterComment.js',
   },
   devtool: 'inline-source-map',
   devServer: {
