@@ -93,6 +93,7 @@ footer {
 
 .invisible {
   display: none;
+}
 .food-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
