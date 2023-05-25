@@ -8,7 +8,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 JavaScriptCapstone ](#-JavaScriptCapstone-)
+- [📖 JavaScriptCapstone ](#-javascriptcapstone-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -29,7 +29,7 @@
 
 # 📖 JavaScriptCapstone <a name="about-project"></a>
 
-This is a JavaScriptCapstone website, the project for the 5th block of the 2d module at Microverse, and this project is group work Martin and Alishah.
+This is a JavaScriptCapstone website, the project for the 5th block of the 2d module at Microverse, and this is a pair programming project!
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -66,25 +66,33 @@ This is a JavaScriptCapstone website, the project for the 5th block of the 2d mo
   </ul>
 </details>
 
+<details>
+  <summary>Test</summary>
+  <ul>
+    <li><a href="https://jestjs.io/">Jest</a></li>
+  </ul>
+</details>
+
 
 
 
 ### Key Features <a name="key-features"></a>
 
-- **Get the Foods form API**
-- **count the Foods**
-- **Post and get Food Comments form API**
-- **Add new username and comment**
+- **Home Page listing meals**
+- **Popup Window showing more data**
+- **Add and count comments**
+- **Add and count Likes**
 - **Count the comments**
 - **Add Like and Count**
+- **Usage of APIs**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-<!-- Try it with <a href="https://mar12358.github.io/to-do-list/">gh-pages</a> -->
-Coming Soon...
+Try it with <a href="https://mar12358.github.io/JavaScriptCapstone/">gh-pages</a> 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,8 +162,8 @@ Clone:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Improve Style**
-- **Update displayed comments and likes when adding a comment or press like button**
-- **Deployment**
+- **Allow user to prompt first letter to see Meals on demand**
+- **Add 'See More Items' option in Home Page**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
