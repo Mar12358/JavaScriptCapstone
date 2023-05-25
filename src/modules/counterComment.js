@@ -1,8 +1,5 @@
-const counterComments = (array) => {
-  let num = 0;
-  if (array.length > 0) {
-    num = array.length;
-  }
+const counterComments = (item) => {
+  const num = item.length;
   const counter = document.querySelector('.comment-counter');
   counter.innerHTML = `${num}`;
 };
