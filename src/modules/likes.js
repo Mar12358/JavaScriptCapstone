@@ -1,6 +1,6 @@
 const InvAPIurl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/aZwedqY3IXDWCJKZoRkM/likes';
 
-const getLikes = async () => {
+export const getLikes = async () => {
   try {
     const response = await fetch(InvAPIurl, {
       method: 'GET',
@@ -21,4 +21,35 @@ const getLikes = async () => {
   }
 };
 
-export default getLikes;
+export const updateLikesOnDOM = (likeBtn) => {
+  const likeElement = likeBtn.nextElementSibling;
+  const likes = Number(likeElement.innerHTML.split(' ')[0]);
+  likeElement.innerHTML = `${likes + 1} likes`;
+};
+export const addLike = (likeBtn) => {
+  fetch(InvAPIurl, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: likeBtn.id,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+    });
+};
+
+export const addLikesListenerButtons = () => {
+  const likeButtons = document.querySelectorAll('.like-btn');
+  likeButtons.forEach((likeBtn) => {
+    likeBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      addLike(likeBtn);
+      updateLikesOnDOM(likeBtn);
+    });
+  });
+};
