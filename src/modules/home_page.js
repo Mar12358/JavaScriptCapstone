@@ -1,6 +1,7 @@
 import commentsButtonListener from './popup.js';
 import likeImg from '../like_img.png';
 import { getLikes, addLikesListenerButtons } from './likes.js';
+import itemsCounter from './items_counter.js';
 
 const MealsAPIurl = 'https://www.themealdb.com/api/json/v1/1/search.php?f=f';
 
@@ -34,6 +35,8 @@ const populateHTML = (meals, allLikes) => {
 
     container.appendChild(div);
   }
+  itemsCounter(container);
+  // items-link id
   addLikesListenerButtons();
 };
 
