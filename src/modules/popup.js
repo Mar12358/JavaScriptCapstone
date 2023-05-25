@@ -1,6 +1,6 @@
 import displayComment from './displayComments.js';
 import addComment from './addComment.js';
-import getLikes from './likes.js';
+import { getLikes } from './likes.js';
 
 const toggle = () => {
   const elements = document.querySelectorAll('body > *');
