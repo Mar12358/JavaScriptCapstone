@@ -44,9 +44,8 @@ const commentsPopup = async (id) => {
   </form>
   `;
   });
-
-  displayComment(id);
   likeFuncion(id);
+  displayComment(id);
   const btnClose = document.querySelector('#btnClose');
   btnClose.addEventListener('click', () => {
     toggle();
