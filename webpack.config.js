@@ -6,6 +6,14 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
+    renderHeaderFooter: './src/modules/render_header_footer.js',
+    popup: './src/modules/popup.js',
+    home: './src/modules/home_page.js',
+    display: './src/modules/displayComments.js',
+    counterComment: './src/modules/counterComment.js',
+    likes: './src/modules/likes.js',
+    addComment: './src/modules/addComment.js',
+    items_counter: './src/modules/items_counter.js',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -30,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        use: 'file-loader',
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,

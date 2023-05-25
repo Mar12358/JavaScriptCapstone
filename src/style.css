@@ -6,9 +6,202 @@
 }
 
 * {
+  text-decoration: none;
   padding: 0;
   margin: 0;
   font-size: 14px;
-  background-color: aqua;
   font-family: 'MyFont', sans-serif;
+  list-style-type: none;
+}
+
+nav {
+  display: flex;
+  gap: 5vw;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+a {
+  color: black;
+}
+
+h1 {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 6vw;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+#header-logo {
+  height: 3rem;
+}
+
+/* poupup style starteded */
+
+.popup-window {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin: 2px auto;
+  border: 2px solid rgb(12, 12, 14);
+}
+
+.test-div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 2%;
+}
+
+#btnClose {
+  font-size: 27px;
+  font-weight: bold;
+  width: 6%;
+  height: 15%;
+  background-color: inherit;
+  border: none;
+}
+
+.test-div img {
+  width: 40%;
+}
+
+.food-name {
+  text-align: center;
+  margin: 10px;
+}
+
+.names-content {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+  column-gap: 20px;
+  padding: 8px 30px;
+}
+
+.food-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  align-items: center;
+  align-self: center;
+}
+
+.card-element {
+  /* height: 15vh; */
+  display: flex;
+  flex-direction: column;
+
+  /* align-items: center; */
+  gap: 0.5vh;
+  margin-bottom: 3vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.meal-img {
+  height: 20vh;
+}
+
+.img-container,
+.btn-container,
+.reservations-container {
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-icon {
+  height: 20px;
+}
+
+.like-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-button,
+.reservations-button {
+  width: 55%;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  text-align: center;
+}
+
+.invisible {
+  display: none;
+}
+
+.show-comment-title,
+.add-comment-title {
+  text-align: center;
+  margin: 10px;
+}
+
+.comment-list {
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+  color: #555;
+}
+
+.comment-list .span {
+  margin: 6px;
+}
+
+#form-comment {
+  width: 50%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+}
+
+.userName {
+  margin-top: 2%;
+  width: 40%;
+}
+
+.userComent {
+  width: 50%;
+}
+
+.submit {
+  margin-bottom: 5%;
+  width: 40%;
 }
