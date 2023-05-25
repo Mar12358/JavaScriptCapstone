@@ -19,7 +19,7 @@ const renderHeaderFooter = () => {
   section.innerHTML = `<div class="food-list">
                        </div>`;
 
-  footer.innerHTML = '<p>Created by Microverse students by MIT license</p>';
+  footer.innerHTML = '<p>Created by Microverse students under MIT license</p>';
   body.appendChild(popUp);
   body.insertBefore(nav, h1);
   body.appendChild(section);
