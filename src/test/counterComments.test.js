@@ -15,9 +15,9 @@ describe('Here we test the counter comments', () => {
     expect(counterComment(items)).toBe(6);
   });
 
-  // test("Second test: test the not be equal", () => {
-  //     expect(counterComment(items)).not.toBe(3);
-  // });
+  test("Second test: test the not be equal", () => {
+      expect(counterComment(items)).not.toBe(3);
+  });
 
   // test("Thired test: test the not be equal", () => {
   //     expect(counterComment(seconditems)).toBe(2);
