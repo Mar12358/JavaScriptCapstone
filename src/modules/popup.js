@@ -10,10 +10,10 @@ const toggle = () => {
 };
 
 const likeFuncion = async (id) => {
-  const butnLike = document.querySelector('.likesNum');
+  const divLike = document.querySelector('.likesNum');
   const allLikes = await getLikes();
   const mealLikes = allLikes.find((like) => like.item_id === id);
-  butnLike.innerHTML = ` Likes: ${mealLikes.likes}`;
+  divLike.innerHTML = ` Likes: ${mealLikes.likes}`;
 };
 
 const commentsPopup = async (id) => {
