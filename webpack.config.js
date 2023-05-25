@@ -12,6 +12,8 @@ module.exports = {
     display: './src/modules/displayComments.js',
     counterComment: './src/modules/counterComment.js',
     likes: './src/modules/likes.js',
+    addComment: './src/modules/addComment.js',
+    items_counter: './src/modules/items_counter.js',
   },
   devtool: 'inline-source-map',
   devServer: {
