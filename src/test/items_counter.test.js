@@ -14,14 +14,6 @@ describe('TEST Items Counter', () => {
   const sixElements = document.createElement('div');
   sixElements.innerHTML = '<div></div><div></div><div></div><div></div><div></div><div></div>';
 
-  /*   test('Zero elements should count 0', () => {
-    console.log(zeroElements);
-    expect(itemsCounter(zeroElements)).toBe(0);
-    expect(itemsCounter(zeroElements)).not.toBeNull();
-    expect(itemsCounter(zeroElements)).toBeDefined();
-    expect(itemsCounter(zeroElements)).not.toBeUndefined();
-  }); */
-
   test('One elements should count 1', () => {
     expect(itemsCounter(oneElement)).toEqual(1);
   });
